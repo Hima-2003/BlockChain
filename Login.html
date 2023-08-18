@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Login to HouseCare Health Hospital</title>
+	<link rel="stylesheet" href="login_page.css"/>
+	<style>
+		.button {
+    			display: block;
+    			width: 115px;
+    			height: 25px;
+    			background:skyblue ;
+    			padding: 10px;
+    			text-align: center;
+    			border-radius: 5px;
+    			color: white;
+    			font-weight: bold;
+    			line-height: 25px;
+		}
+		body{
+			background-image:url('C://Users//User//Desktop//project//hero.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.btn{
+			width:100px;
+			height:50px;
+			border-radius:25px;
+			font-size:20px;
+			cursor:pointer;
+			margin-top:2em;
+			margin-left:50px;
+		}
+
+	</style>
+	<script>
+		function Validation() {
+		    let y = document.forms["myform"]["s2"].value;
+		    var z = document.getElementById("myEmail").pattern;
+		    if (y == "") {
+			alert("password must be filled out");
+			return false;
+		    }
+		}
+	</script>
+</head>
+<body>
+	<button onclick="history.back()" class='btn'>Back</button>
+	<div class="login-box">
+		<h1>Login</h1>
+		<form method="post" name="myform" onsubmit="return Validation()" action="">
+		     <label>Email</label>
+		     <input type="email" name="s1" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+		     <label>Password</label>
+		     <input type="password" name="s2" placeholder="" required>
+		<br><br>
+		<input type="submit" value="submit">
+		</form>
+	</div>
+	<p class="para-2" style="color:black;">
+		Only for Doctors Login
+	</p>
+</body>
+</html>

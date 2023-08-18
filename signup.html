@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <title>Sign Up | By Code Info</title>
+    <link rel="stylesheet" href="login_page.css"/>
+	<style>
+	.btn{
+			width:100px;
+			height:50px;
+			border-radius:25px;
+			font-size:20px;
+			cursor:pointer;
+			margin-left:50px;
+	}
+	</style>
+    <script>
+      function validation() {
+        let x = document.forms["myform"]["s1"].value;
+        let y = document.forms["myform"]["s2"].value;
+        let a = document.forms["myform"]["s4"].value;
+        let b = document.forms["myform"]["s5"].value;
+        var z = document.getElementById("myEmail").pattern;
+        
+
+        if (x == "") {
+          alert("firstname must be filled out");
+          return false;
+        }
+        if (y == "") {
+          alert("Lastname must be filled out");
+          return false;
+        }
+        if(a!=b){
+          alert("Confirmpassword does not match");
+          return false;
+        }
+      }
+      </script>
+</head>
+      <body>
+	<button onclick="history.back()" class='btn'>Back</button>
+      <div class="signup-box">
+           <h1>Sign Up</h1>
+           <form name="myform" onsubmit="return Validation()" method="post" action="">
+	<label>First Name</label>
+        	<input type="text"  name="s1" placeholder="" / required>
+        	<label>Last Name</label>
+        	<input type="text"  name="s2" placeholder="" / required>
+        	<label>Email</label>
+        	<input type="email" id="myEmail" name="s3" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/ required>
+        	<label>Password</label>
+        	<input type="password" name="s4" placeholder="" / required>
+        	<label>Confirm Password</label>
+        	<input type="password" name="s5" placeholder=""   / required>
+        	<input type="submit" value="Submit"/>
+             </form>
+       </div>
+    	<p class="para-2" style="color:black">
+      	Not having an account Signup here
+    	</p>
+  </body>
+</html>
